@@ -1,4 +1,4 @@
-FROM node:8.12-alpine
+FROM node:lts-alpine
 
 RUN apk --no-cache add python python3==3.6.8-r0 python3-dev==3.6.8-r0 py-pip ca-certificates groff less bash make jq curl wget g++   zip git openssh && \
     pip --no-cache-dir install awscli && \
@@ -11,7 +11,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
 
 RUN npm install -g serverless
 
-ENV SERVERLESS serverless@1.26.1
+ENV SERVERLESS serverless@1.53.0
 RUN yarn global add $SERVERLESS
 WORKDIR /opt/app
 
