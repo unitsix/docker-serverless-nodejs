@@ -2,7 +2,8 @@
 
 # Docker Serverless with NodeJs
 
-Docker image containing Serverless Framework, NodeJS, Make and Yarn.
+Docker image containing Serverless Framework, NodeJS, Make, Yarn and bit.dev (for React components https://docs.bit.dev/docs/quick-start).
+
 For testing and deploying Serverless apps.
 
 `docker pull ryanstockdale/serverless-nodejs`
