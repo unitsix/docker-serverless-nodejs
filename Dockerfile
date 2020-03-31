@@ -9,7 +9,8 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
     apk add glibc-2.25-r0.apk && \
     rm -f glibc-2.25-r0.apk
 
-RUN npm install -g serverless bit-bin
+RUN npm install -g serverless bit-bin && \
+    bit import bit.envs/compilers/react --compiler
 
 ENV SERVERLESS serverless@1.53.0
 RUN yarn global add $SERVERLESS
