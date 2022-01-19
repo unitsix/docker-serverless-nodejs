@@ -1,4 +1,4 @@
-FROM node:8.12-alpine
+FROM node:12.22-alpine3.14
 
 RUN apk --no-cache add python python3==3.6.8-r0 python3-dev==3.6.8-r0 py-pip ca-certificates groff less bash make jq curl wget g++   zip git openssh && \
     pip --no-cache-dir install awscli && \
